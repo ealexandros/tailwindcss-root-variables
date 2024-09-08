@@ -1,10 +1,20 @@
-# 🚀 Tailwind CSS Variables Plugin 🚀
+<h1 align="center">
+  🎨 Tailwind CSS Variables Plugin 🎨
+</h1>
 
-### ✨ Overview
+<div align="center">
+  <img src="https://img.shields.io/badge/Tailwindcss-0F172A?&logo=tailwindcss" />
+  <img src="https://shields.io/badge/CSS-0F172A?logo=css3&logoColor=06B6D4" />
+  <img src="https://shields.io/badge/TypeScript-0F172A?logo=TypeScript&logoColor=06B6D4" />
+</div>
 
-This Tailwind CSS plugin allows you to define custom CSS root variables that can be used throughout your stylesheets. It provides a way to manage and organize CSS variables efficiently using Tailwind's configuration.
+<br />
 
-### 🔨 Installation
+<p align="center">This Tailwind CSS plugin allows you to define custom CSS root variables that can be used throughout your stylesheets. It provides a way to manage and organize CSS variables efficiently using Tailwind's configuration.</p>
+
+<div style="padding-top: 0.2em" />
+
+## 🚀 Installation
 
 To use this plugin, you need to install it and add it to your Tailwind CSS configuration.
 
@@ -16,8 +26,6 @@ $ npm install --save-dev tailwindcss-root-variables
 
 #### 2. Add the plugin to your Tailwind CSS configuration:
 
-##### For JavaScript:
-
 ```javascript
 // tailwind.config.js
 
@@ -27,33 +35,40 @@ module.exports = {
 };
 ```
 
-##### For TypeScript:
-
-```typescript
-// tailwind.config.ts
-
-import type { Config } from "tailwindcss";
-import cssRootVariables from "tailwindcss-root-variables";
-
-const config: Config = {
-  // other configuration...
-  plugins: [cssRootVariables],
-};
-
-export default config;
-```
-
-### ⚙️ Configuration
+## ⚙️ Configuration
 
 You can configure the plugin in your `tailwind.config.js` file using the `rootVars` key.
 
-#### Configuration Options
+### Configuration Options
 
-- `defaultPrefix` (optional): A default prefix for variable names.
-- `useDefaultPrefixOnly` (optional): If `true`, only the default prefix will be used, and no group name will be included.
-- `vars` (optional): An object defining your CSS variables.
+<table>
+  <thead>
+    <tr>
+      <th>Option</th>
+      <th>Description</th>
+      <th>Required</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>defaultPrefix</code></td>
+      <td>A default prefix for variable names.</td>
+      <td>Optional</td>
+    </tr>
+    <tr>
+      <td><code>useDefaultPrefixOnly</code></td>
+      <td>If <code>true</code>, only the default prefix will be used, and no group name will be included.</td>
+      <td>Optional</td>
+    </tr>
+    <tr>
+      <td><code>vars</code></td>
+      <td>An object defining your CSS variables.</td>
+      <td>Optional</td>
+    </tr>
+  </tbody>
+</table>
 
-#### Example Configuration:
+### Example Configuration:
 
 ```javascript
 // tailwind.config.js
@@ -92,7 +107,7 @@ This configuration will generate the following CSS variables:
 }
 ```
 
-### 💫 Usage
+## 💫️ Usage
 
 After configuring the plugin, you can use the generated CSS variables in your stylesheets as you normally would:
 
@@ -103,10 +118,10 @@ After configuring the plugin, you can use the generated CSS variables in your st
 }
 ```
 
-### 📝 License
+## 📝 License
 
-This plugin is licensed under the MIT License.
+This plugin is licensed under the [MIT License](#https://github.com/ealexandros/tailwindcss-root-variables/blob/main/LICENSE).
 
-### 🤝 Contributing
+## 🤝 Contributing
 
 If you would like to contribute to the development of this plugin, please submit a pull request or open an issue with any suggestions or bugs.
