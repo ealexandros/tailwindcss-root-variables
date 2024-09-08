@@ -1,0 +1,29 @@
+{
+  "name": "tailwindcss-root-variables",
+  "version": "1.0.0",
+  "description": "A Tailwind CSS plugin for defining custom CSS variables to use across your stylesheet.",
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "types": "./src/index.d.ts",
+  "scripts": {
+    "dev": "bunx tailwindcss -o ./src/dev-output.css --watch",
+    "build": "bun build ./src/index.ts --outdir ./dist",
+    "prettier:check": "bunx prettier --check .",
+    "prettier:write": "bunx prettier --write .",
+    "prepare": "husky"
+  },
+  "peerDependencies": {
+    "tailwindcss": ">=3.0.0"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "husky": "^9.1.5",
+    "lint-staged": "^15.2.10",
+    "tailwindcss": "^3.0.0"
+  },
+  "lint-staged": {
+    "*.{json,js,jsx,ts,tsx}": [
+      "bun run prettier:write"
+    ]
+  }
+}

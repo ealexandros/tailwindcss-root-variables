@@ -1,0 +1,17 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  "[json,js,ts,tsx,jsx]": {
+    "editor.formatOnSave": true
+  },
+
+  "files.trimFinalNewlines": true,
+  "files.insertFinalNewline": true,
+
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "always",
+    "source.sortPackageJson": "always"
+  },
+
+  "css.customData": [".vscode/tailwind-directives.json"]
+}
