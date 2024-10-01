@@ -5,7 +5,7 @@
   "description": "A Tailwind CSS plugin for defining custom CSS variables to use across your stylesheet.",
   "license": "MIT",
   "main": "./dist/index.js",
-  "types": "./src/index.d.ts",
+  "types": "./dist/index.d.ts",
   "keywords": [
     "tailwindcss",
     "tailwindcss-plugin",
@@ -37,7 +37,6 @@
     "prepare": "husky",
     "prepublishOnly": "bun run build"
   },
-  "packageManager": "^bun@1.0.30",
   "dependencies": {},
   "devDependencies": {
     "husky": "^9.1.5",
@@ -46,6 +45,13 @@
   },
   "peerDependencies": {
     "tailwindcss": ">=3.0.0"
+  },
+  "packageManager": "^bun@1.0.30",
+  "engines": {
+    "npm": "please-use-bun",
+    "yarn": "please-use-bun",
+    "pnpm": "please-use-bun",
+    "bun": ">=1.0.30"
   },
   "lint-staged": {
     "*.{json,js,jsx,ts,tsx}": [
