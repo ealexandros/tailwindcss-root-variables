@@ -24,6 +24,8 @@ To use this plugin, you need to install it and add it to your Tailwind CSS confi
 $ npm install --save-dev tailwindcss-root-variables
 ```
 
+You can find the package on [npm here](https://www.npmjs.com/package/tailwindcss-root-variables).
+
 #### 2. Add the plugin to your Tailwind CSS configuration:
 
 ```javascript
@@ -109,15 +111,15 @@ This configuration will generate the following CSS variables:
 
 ### Integrating with Typescript
 
-Use the `WithRootVars<Config>` type to type to seamlessly incorporate custom CSS variables into your Tailwind CSS configuration.
+Use the `WithRootVarsType<Config>` type to type to seamlessly incorporate custom CSS variables into your Tailwind CSS configuration.
 
 ```typescript
 // typescript.config.ts
 
 import type { Config } from "tailwindcss";
-import type { WithRootVars } from "tailwindcss-root-variables";
+import type { WithRootVarsType } from "tailwindcss-root-variables";
 
-const config: WithRootVars<Config> = {
+const config: WithRootVarsType<Config> = {
   rootVars: {
     defaultPrefix: "my",
     // additional config...
