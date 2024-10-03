@@ -2,10 +2,10 @@ import plugin from "tailwindcss/plugin";
 
 const CONFIG_SECTION_NAME = "rootVars";
 
+export type WithRootVarsType<T> = RootVarsType & T;
+
 export type RootVarsType = {
-  defaultPrefix?: string;
-  useDefaultPrefixOnly?: boolean;
-  vars?: Record<string, Record<string, string>>;
+  [CONFIG_SECTION_NAME]: RootVarsProps;
 };
 
 const buildVariableName = (
@@ -23,8 +23,14 @@ const buildVariableName = (
   return `--${prefix}${prefix && "-"}${groupName}-${propertyName}`;
 };
 
+type RootVarsProps = {
+  defaultPrefix?: string;
+  useDefaultPrefixOnly?: boolean;
+  vars?: Record<string, Record<string, string>>;
+};
+
 const cssRootVariablesPlugin = plugin(({ addComponents, config }) => {
-  const rootVarsConfig: RootVarsType = config(CONFIG_SECTION_NAME) || {};
+  const rootVarsConfig: RootVarsProps = config(CONFIG_SECTION_NAME) || {};
 
   const {
     defaultPrefix = "",

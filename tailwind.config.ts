@@ -1,7 +1,7 @@
 import type { Config } from "tailwindcss";
-import cssRootVariables from "./src";
+import cssRootVariables, { WithRootVarsType } from "./src";
 
-const config: Config = {
+const config: WithRootVarsType<Config> = {
   content: [],
   rootVars: {
     defaultPrefix: "custom",

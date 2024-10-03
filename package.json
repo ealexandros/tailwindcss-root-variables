@@ -31,7 +31,9 @@
   ],
   "scripts": {
     "dev": "bunx tailwindcss -o ./src/dev-output.css --watch",
-    "build": "bun build ./src/index.ts --outdir ./dist",
+    "build": "bun run build:code && bun run build:types",
+    "build:code": "bun build ./src/index.ts --outdir ./dist",
+    "build:types": "bunx tsc --emitDeclarationOnly",
     "prettier:check": "bunx prettier --check .",
     "prettier:write": "bunx prettier --write .",
     "prepare": "husky",

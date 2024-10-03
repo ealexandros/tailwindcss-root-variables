@@ -80,7 +80,6 @@ const customSpacing = {
 };
 
 module.exports = {
-  // other configuration...
   rootVars: {
     defaultPrefix: "my",
     useDefaultPrefixOnly: false,
@@ -92,6 +91,7 @@ module.exports = {
       spacing: customSpacing,
     },
   },
+  // additional config...
 };
 ```
 
@@ -105,6 +105,27 @@ This configuration will generate the following CSS variables:
   --my-spacing-medium: 8px;
   --my-spacing-large: 16px;
 }
+```
+
+### Integrating with Typescript
+
+Use the `WithRootVars<Config>` type to type to seamlessly incorporate custom CSS variables into your Tailwind CSS configuration.
+
+```typescript
+// typescript.config.ts
+
+import type { Config } from "tailwindcss";
+import type { WithRootVars } from "tailwindcss-root-variables";
+
+const config: WithRootVars<Config> = {
+  rootVars: {
+    defaultPrefix: "my",
+    // additional config...
+  },
+  // additional config...
+};
+
+export default config;
 ```
 
 ## 💫️ Usage
