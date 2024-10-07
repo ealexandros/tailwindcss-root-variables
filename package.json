@@ -1,7 +1,7 @@
 {
   "name": "tailwindcss-root-variables",
   "author": "ealexandros",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Tailwind CSS plugin for defining custom CSS variables to use across your stylesheet.",
   "license": "MIT",
   "main": "./dist/index.js",
