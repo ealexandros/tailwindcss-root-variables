@@ -143,7 +143,7 @@ After configuring the plugin, you can use the generated CSS variables in your st
 
 ## 📝 License
 
-This plugin is licensed under the [MIT License](#https://github.com/ealexandros/tailwindcss-root-variables/blob/main/LICENSE).
+This plugin is licensed under the [MIT License](https://github.com/ealexandros/tailwindcss-root-variables/blob/main/LICENSE).
 
 ## 🤝 Contributing
 
